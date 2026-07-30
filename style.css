@@ -1,0 +1,236 @@
+/* RxVision App Styling */
+
+:root {
+  --primary: #3f51b5;
+  --primary-dark: #1a237e;
+  --primary-light: #e8eaf6;
+  --secondary: #5c6bc0;
+  --accent: #4caf50;
+  --danger: #d32f2f;
+  --danger-bg: #ffebee;
+  --warning: #ff9800;
+  --bg-color: #f4f6f9;
+  --card-bg: #ffffff;
+  --text-dark: #2c3e50;
+  --text-muted: #666666;
+  --border-radius: 12px;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-dark);
+}
+
+.container {
+  min-height: 100vh;
+  padding: 24px 16px;
+  box-sizing: border-box;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.title {
+  color: var(--primary-dark);
+  font-size: 2.2rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.subtitle {
+  color: var(--secondary);
+  font-size: 1rem;
+  margin-top: 6px;
+}
+
+.main-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Card Styling */
+.card {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  padding: 24px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary-dark);
+}
+
+/* Upload Area */
+.upload-zone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.upload-btn {
+  background-color: var(--primary-light);
+  color: var(--primary);
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.upload-btn:hover {
+  background-color: #d7dcf7;
+}
+
+.preview-img {
+  width: 100%;
+  max-height: 260px;
+  object-fit: contain;
+  margin-top: 16px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+/* Primary Action Button */
+.action-btn {
+  width: 100%;
+  background-color: var(--primary);
+  color: #ffffff;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.action-btn:hover:not(:disabled) {
+  background-color: var(--primary-dark);
+}
+
+.action-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Alert Boxes */
+.alert-box {
+  padding: 16px;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--danger);
+  background-color: var(--danger-bg);
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.alert-title {
+  color: var(--danger);
+  font-weight: 700;
+}
+
+.alert-list {
+  margin: 6px 0 0 0;
+  padding-left: 20px;
+  color: #b71c1c;
+}
+
+/* Medication List Cards */
+.med-card {
+  background-color: #f8f9fa;
+  border-left: 4px solid var(--primary);
+  padding: 14px 16px;
+  margin: 12px 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.med-header {
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.badge {
+  background-color: #e3f2fd;
+  color: #1976d2;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.med-card p {
+  margin: 6px 0 0 0;
+  color: var(--text-dark);
+  font-size: 0.95rem;
+}
+
+/* Input Group for WhatsApp Alerts */
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.phone-input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #cccccc;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.phone-input:focus {
+  border-color: var(--primary);
+}
+
+.reminder-btn {
+  background-color: var(--accent);
+  color: #ffffff;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.reminder-btn:hover {
+  opacity: 0.9;
+}
+
+.success-message {
+  color: var(--accent);
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
